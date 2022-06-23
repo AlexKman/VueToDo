@@ -1,5 +1,7 @@
 <template>
-  <div>Hello World</div>
+  <div class="container">
+    <h1 class="text-center mt-8">My app</h1>
+  </div>
 </template>
 
 <script>
