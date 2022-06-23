@@ -5,6 +5,25 @@
       <input type="text" placeholder="Enter Task" class="form-control" />
       <button class="btn btn-warning rounded-0">Submit</button>
     </div>
+
+    <table class="table table-bordered mt-4">
+      <thead>
+        <tr>
+          <th scope="col">Task</th>
+          <th scope="col">Status</th>
+          <th scope="col" class="text-center">#</th>
+          <th scope="col" class="text-center">#</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Play Call of Duty</th>
+          <td>To do</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
