@@ -17,7 +17,7 @@
       </thead>
       <tbody>
         <tr>
-          <th>Play Call of Duty</th>
+          <th>Play Games</th>
           <td>To do</td>
           <td>
             <div class="text-center">
@@ -40,6 +40,14 @@ export default {
   name: "HelloWorld",
   props: {
     msg: String,
+  },
+  data() {
+    return {
+      tasks: [
+        { name: "Make Pasta", status: "To do" },
+        { name: "Eat Pasta", status: "To do" },
+      ],
+    };
   },
 };
 </script>
