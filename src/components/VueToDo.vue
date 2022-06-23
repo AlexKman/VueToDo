@@ -20,12 +20,12 @@
           <th>Play Call of Duty</th>
           <td>To do</td>
           <td>
-            <div>
+            <div class="text-center">
               <span class="fa fa-pen"></span>
             </div>
           </td>
           <td>
-            <div>
+            <div class="text-center">
               <span class="fa fa-trash"></span>
             </div>
           </td>
