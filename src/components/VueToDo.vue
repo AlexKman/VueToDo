@@ -61,6 +61,8 @@ export default {
       if (this.task.length === 0) return;
 
       this.tasks.push({ name: this.task, status: "To do" });
+
+      this.task = "";
     },
     deleteTask(index) {
       this.tasks.splice(index, 1);
