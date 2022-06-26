@@ -30,7 +30,7 @@
             </div>
           </td>
           <td>
-            <div class="text-center">
+            <div class="text-center" @click="deleteTask(index)">
               <span class="fa fa-trash"></span>
             </div>
           </td>
@@ -61,6 +61,9 @@ export default {
       if (this.task.length === 0) return;
 
       this.tasks.push({ name: this.task, status: "To do" });
+    },
+    deleteTask() {
+      console.log(this.task.index);
     },
   },
 };
