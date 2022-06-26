@@ -49,6 +49,12 @@ export default {
       ],
     };
   },
+
+  methods: {
+    addTask() {
+      console.log("addTask");
+    },
+  },
 };
 </script>
 
