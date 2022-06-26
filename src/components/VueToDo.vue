@@ -52,6 +52,7 @@ export default {
     return {
       task: "",
       editedTask: null,
+      statuses: ["To-do", "In progress", "Complete"],
       tasks: [
         { name: "Make Pasta", status: "Complete" },
         { name: "Eat Pasta", status: "To do" },
@@ -82,7 +83,9 @@ export default {
     },
 
     changeStatus(index) {
-      console.log(index);
+      let newIndex = this.statuses.indexOf(this.tasks[index].status);
+      if (++newIndex > 2) newIndex = 0;
+      this.tasks[index].status = this.statuses[index];
     },
   },
 };
