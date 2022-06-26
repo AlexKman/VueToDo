@@ -23,7 +23,7 @@
       <tbody>
         <tr v-for="(task, index) in tasks" :key="index">
           <th>{{ task.name }}</th>
-          <td>
+          <td class="status-column">
             <span @click="changeStatus(index)">{{ task.status }}</span>
           </td>
           <td>
@@ -52,7 +52,7 @@ export default {
     return {
       task: "",
       editedTask: null,
-      statuses: ["To-do", "In progress", "Complete"],
+      statuses: ["To do", "In progress", "Complete"],
       tasks: [
         { name: "Make Pasta", status: "Complete" },
         { name: "Eat Pasta", status: "To do" },
@@ -95,5 +95,8 @@ export default {
 <style scoped>
 .pointer {
   cursor: pointer;
+}
+.status-column {
+  width: 140px;
 }
 </style>
