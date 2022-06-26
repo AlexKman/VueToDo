@@ -18,7 +18,7 @@
       <tbody>
         <tr v-for="(task, index) in tasks" :key="index">
           <th>{{ task.name }}</th>
-          <td>{{ task.taskStatus }}</td>
+          <td>{{ task.status }}</td>
           <td>
             <div class="text-center">
               <span class="fa fa-pen"></span>
@@ -44,8 +44,8 @@ export default {
   data() {
     return {
       tasks: [
-        { name: "Make Pasta", taskStatus: "To do" },
-        { name: "Eat Pasta", taskStatus: "To do" },
+        { name: "Make Pasta", status: "To do" },
+        { name: "Eat Pasta", status: "To do" },
       ],
     };
   },
