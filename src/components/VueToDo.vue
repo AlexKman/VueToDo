@@ -85,7 +85,7 @@ export default {
     changeStatus(index) {
       let newIndex = this.statuses.indexOf(this.tasks[index].status);
       if (++newIndex > 2) newIndex = 0;
-      this.tasks[index].status = this.statuses[index];
+      this.tasks[index].status = this.statuses[newIndex];
     },
   },
 };
