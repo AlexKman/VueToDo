@@ -2,7 +2,12 @@
   <div class="container">
     <h1 class="text-center mt-8">My app</h1>
     <div class="d-flex">
-      <input type="text" placeholder="Enter Task" class="form-control" />
+      <input
+        v-model="task"
+        type="text"
+        placeholder="Enter Task"
+        class="form-control"
+      />
       <button @click="addTask" class="btn btn-warning rounded-0">Submit</button>
     </div>
 
@@ -37,12 +42,13 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "VueToDo",
   props: {
     msg: String,
   },
   data() {
     return {
+      task: "",
       tasks: [
         { name: "Make Pasta", status: "To do" },
         { name: "Eat Pasta", status: "To do" },
@@ -52,7 +58,7 @@ export default {
 
   methods: {
     addTask() {
-      console.log("addTask");
+      this.tasks.push({ name: this.task, status: "To do" });
     },
   },
 };
