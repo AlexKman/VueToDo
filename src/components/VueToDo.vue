@@ -26,12 +26,12 @@
           <td>{{ task.status }}</td>
           <td>
             <div class="text-center" @click="editTask(index)">
-              <span class="fa fa-pen"></span>
+              <span class="fa fa-pen pointer"></span>
             </div>
           </td>
           <td>
             <div class="text-center" @click="deleteTask(index)">
-              <span class="fa fa-trash"></span>
+              <span class="fa fa-trash pointer"></span>
             </div>
           </td>
         </tr>
@@ -51,7 +51,7 @@ export default {
       task: "",
       editedTask: null,
       tasks: [
-        { name: "Make Pasta", status: "To do" },
+        { name: "Make Pasta", status: "Complete" },
         { name: "Eat Pasta", status: "To do" },
       ],
     };
@@ -83,4 +83,8 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
+<style scoped>
+.pointer {
+  cursor: pointer;
+}
+</style>
