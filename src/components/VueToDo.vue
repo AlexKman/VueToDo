@@ -25,7 +25,7 @@
           <th>{{ task.name }}</th>
           <td>{{ task.status }}</td>
           <td>
-            <div class="text-center">
+            <div class="text-center" @click="editTask(index)">
               <span class="fa fa-pen"></span>
             </div>
           </td>
@@ -64,8 +64,13 @@ export default {
 
       this.task = "";
     },
+
     deleteTask(index) {
       this.tasks.splice(index, 1);
+    },
+
+    editTask(index) {
+      console.log(index);
     },
   },
 };
