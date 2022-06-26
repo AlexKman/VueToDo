@@ -49,6 +49,7 @@ export default {
   data() {
     return {
       task: "",
+      editedTask: null,
       tasks: [
         { name: "Make Pasta", status: "To do" },
         { name: "Eat Pasta", status: "To do" },
@@ -60,8 +61,12 @@ export default {
     addTask() {
       if (this.task.length === 0) return;
 
-      this.tasks.push({ name: this.task, status: "To do" });
-
+      if (this.editedTask === null) {
+        this.tasks.push({ name: this.task, status: "To do" });
+      } else {
+        this.tasks[this.editedTask].name = this.task;
+        this.editedTask = null;
+      }
       this.task = "";
     },
 
@@ -70,7 +75,8 @@ export default {
     },
 
     editTask(index) {
-      console.log(index);
+      this.task = this.tasks[index].name;
+      this.editedTask = index;
     },
   },
 };
