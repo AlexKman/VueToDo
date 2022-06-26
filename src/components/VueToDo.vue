@@ -62,8 +62,8 @@ export default {
 
       this.tasks.push({ name: this.task, status: "To do" });
     },
-    deleteTask() {
-      console.log(this.task.index);
+    deleteTask(index) {
+      console.log(index);
     },
   },
 };
