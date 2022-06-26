@@ -58,6 +58,8 @@ export default {
 
   methods: {
     addTask() {
+      if (this.tasks.length === 0) return;
+
       this.tasks.push({ name: this.task, status: "To do" });
     },
   },
